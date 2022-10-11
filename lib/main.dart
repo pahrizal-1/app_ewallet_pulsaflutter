@@ -1,5 +1,9 @@
+import 'package:app_ecom_buidwigga/shared/theme.dart';
 import 'package:app_ecom_buidwigga/ui/pages/home_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/on_boarding_page.dart';
+import 'package:app_ecom_buidwigga/ui/pages/pin_page.dart';
+import 'package:app_ecom_buidwigga/ui/pages/profile_edit_photo.dart';
+import 'package:app_ecom_buidwigga/ui/pages/profile_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/sign_in_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/sign_up_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/sign_up_set_ktp_page.dart';
@@ -22,8 +26,17 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          scaffoldBackgroundColor: lightBackgroundColor,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: true,
+            iconTheme: IconThemeData(color: blackColor),
+            titleTextStyle: blackTextStyle.copyWith(
+              fontWeight: semiBold,
+              fontSize: 20,
+            ),
+          )),
       routes: {
         '/': (context) => const SplashScreenPage(),
         '/onboarding': (context) => const OnBoardingPage(),
@@ -33,6 +46,9 @@ class MyApp extends StatelessWidget {
         '/sign-up-set': (context) => const SignInSetProfile(),
         '/sign-up-succes': (context) => const SignUpSucces(),
         '/home-page': (context) => const HomePage(),
+        '/profil-page': (context) => const ProfilePage(),
+        '/pin-page': (context) => const PinPage(),
+        '/edit-profil-page': (context) => const EditProfilePage(),
       },
     );
   }

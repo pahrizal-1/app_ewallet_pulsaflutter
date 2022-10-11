@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         children: [
-          buidlprofile(),
+          buidlprofile(context),
           buidwalletCard(),
           buidlevel(),
           buildSevces(),
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget buidlprofile() {
+  Widget buidlprofile(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 42),
       child: Row(
@@ -115,24 +115,29 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          Container(
-            height: 60,
-            width: 60,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                    image: AssetImage('assets/img_profile.png'))),
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                width: 16,
-                height: 16,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: whiteColor),
-                child: Icon(
-                  Icons.check_circle,
-                  size: 14,
-                  color: greenColor,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/profil-page');
+            },
+            child: Container(
+              height: 60,
+              width: 60,
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: AssetImage('assets/img_profile.png'))),
+              child: Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  width: 16,
+                  height: 16,
+                  decoration:
+                      BoxDecoration(shape: BoxShape.circle, color: whiteColor),
+                  child: Icon(
+                    Icons.check_circle,
+                    size: 14,
+                    color: greenColor,
+                  ),
                 ),
               ),
             ),
