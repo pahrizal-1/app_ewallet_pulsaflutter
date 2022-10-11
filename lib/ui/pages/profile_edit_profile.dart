@@ -14,7 +14,7 @@ class EditProfilePage extends StatelessWidget {
       appBar: AppBar(
         // ignore: prefer_const_constructors
         title: Text(
-          'Edit Photo',
+          'Edit Profile',
         ),
       ),
       body: ListView(
@@ -31,7 +31,7 @@ class EditProfilePage extends StatelessWidget {
               ),
             ),
             child: Column(
-              children: const [
+              children: [
                 CustomFormField(
                   title: 'Username',
                 ),
@@ -57,7 +57,12 @@ class EditProfilePage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                CustomFilledButton(title: 'Update Now')
+                CustomFilledButton(
+                  title: 'Update Now',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/edit-profil-pin');
+                  },
+                )
               ],
             ),
           ),

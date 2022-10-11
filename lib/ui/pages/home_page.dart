@@ -421,8 +421,8 @@ class _HomePageState extends State<HomePage> {
           ),
           // ignore: prefer_const_constructors
           Wrap(
-            spacing: 17,
-            runSpacing: 18,
+            spacing: 15,
+            runSpacing: 15,
             children: const [
               HomeTips(
                 imgUrl: 'assets/img_tips1.png',

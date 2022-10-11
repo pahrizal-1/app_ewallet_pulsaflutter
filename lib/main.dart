@@ -2,7 +2,8 @@ import 'package:app_ecom_buidwigga/shared/theme.dart';
 import 'package:app_ecom_buidwigga/ui/pages/home_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/on_boarding_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/pin_page.dart';
-import 'package:app_ecom_buidwigga/ui/pages/profile_edit_photo.dart';
+import 'package:app_ecom_buidwigga/ui/pages/profile_edit_pin.dart';
+import 'package:app_ecom_buidwigga/ui/pages/profile_edit_profile.dart';
 import 'package:app_ecom_buidwigga/ui/pages/profile_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/sign_in_page.dart';
 import 'package:app_ecom_buidwigga/ui/pages/sign_up_page.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         '/profil-page': (context) => const ProfilePage(),
         '/pin-page': (context) => const PinPage(),
         '/edit-profil-page': (context) => const EditProfilePage(),
+        '/edit-profil-pin': (context) => const ProfilEditPin(),
       },
     );
   }

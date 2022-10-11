@@ -98,6 +98,9 @@ class _SignUpPageState extends State<SignUpPage> {
               Navigator.pushNamed(context, '/sign-in');
             },
           ),
+          const SizedBox(
+            height: 50,
+          )
         ],
       ),
     );

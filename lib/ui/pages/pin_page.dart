@@ -20,6 +20,9 @@ class _PinPageState extends State<PinPage> {
         pinController.text = pinController.text + number;
       });
     }
+    if (pinController.text == '123123') {
+      Navigator.pop(context, true);
+    }
   }
 
   deletedPin() {
@@ -62,7 +65,7 @@ class _PinPageState extends State<PinPage> {
                   style: whiteTextStyle.copyWith(
                     fontWeight: medium,
                     fontSize: 36,
-                    letterSpacing: 16,
+                    letterSpacing: 15,
                   ),
                   decoration: InputDecoration(
                     disabledBorder: UnderlineInputBorder(
@@ -76,8 +79,8 @@ class _PinPageState extends State<PinPage> {
                 height: 66,
               ),
               Wrap(
-                spacing: 40,
-                runSpacing: 40,
+                spacing: 35,
+                runSpacing: 35,
                 children: [
                   CustomInputButton(
                     title: '1',

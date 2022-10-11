@@ -101,6 +101,10 @@ class _SignUpKtpState extends State<SignUpKtp> {
             title: 'Skip for Now',
             onPressed: () {},
           ),
+          // ignore: prefer_const_constructors
+          SizedBox(
+            height: 50,
+          )
         ],
       ),
     );

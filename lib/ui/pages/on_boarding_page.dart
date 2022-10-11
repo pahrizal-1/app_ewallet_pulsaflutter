@@ -54,7 +54,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 ),
               ],
               options: CarouselOptions(
-                height: 331,
+                height: 250,
                 viewportFraction: 1,
                 enableInfiniteScroll: false,
                 onPageChanged: (index, reason) {
